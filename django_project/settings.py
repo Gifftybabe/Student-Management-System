@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
                  # "0.0.0.0",
                  "127.0.0.1",
-                 "https://student-management-system-6387.onrender.com"
+                 "student-management-system-6387.onrender.com"
                 ]
 
 
