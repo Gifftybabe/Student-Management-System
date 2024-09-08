@@ -132,9 +132,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'https://trgst.vercel.app',
-    'https://trgst.store',
+    'http://localhost',
+    'https://student-management-system-6387.onrender.com'
 ]
 
 
