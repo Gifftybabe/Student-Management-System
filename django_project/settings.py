@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-*8a1sqyg@uqn83tj!=t$8$x3r1$#r(&25((g85au_5$y5d-4wh
 DEBUG = True
 
 ALLOWED_HOSTS = [
-                 "0.0.0.0",
-                 "127.0.0.1",
-                 "student-management-system-6387.onrender.com"
+                 '0.0.0.0',
+                 '127.0.0.1',
+                 'student-management-system-6387.onrender.com',
                 ]
 
 
@@ -127,6 +127,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Add allowed origins for CSRF token
+
+CSRF_TRUSTED_ORIGINS = ['https://student-management-system-6387.onrender.com']
+
 # Ensure that not all origins are allowed, and then explicitly specify allowed origins
 
 CORS_ALLOW_ALL_ORIGINS = False
@@ -148,3 +152,11 @@ CORS_ALLOW_HEADERS = [
     'Authorization',
     'x-csrftoken',
 ]
+
+# Send Cookies over non-secure connections
+
+SESSION_COOKIE_SECURE = True
+
+# Send CSRF token over non-secure connections
+
+CSRF_COOKIE_SECURE = True
