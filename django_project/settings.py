@@ -126,3 +126,26 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Ensure that not all origins are allowed, and then explicitly specify allowed origins
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'https://trgst.vercel.app',
+    'https://trgst.store',
+]
+
+
+# Special settings for cookies or any special headers
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'accept',
+    'origin',
+    'Authorization',
+    'x-csrftoken',
+]
